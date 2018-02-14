@@ -9,11 +9,12 @@
         <!--  This is an HTML comment.  It will show up on the rendered page.-->
         <h1>Home, Sweet Home.</h1>
         <p>Kick back and relax... you've made it home.</p>
+        <p>Go to <a href="{path='category_view'}">Category View</a></p>
 
         <h2>The Latest</h2>
         <p>Check out the <a href="{path='news'}">latest news</a>:</p>
         <ul>
-                {exp:channel:entries channel="mfdc_news" limit="10"}
+                {exp:channel:entries channel="news" limit="10"}
                         <li><a href="{url_title_path='news'}">{title}</a></li>
                 {/exp:channel:entries}
         </ul>

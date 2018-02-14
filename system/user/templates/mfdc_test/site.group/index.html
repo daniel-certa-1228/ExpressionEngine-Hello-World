@@ -17,5 +17,12 @@
                         <li><a href="{url_title_path='news'}">{title}</a></li>
                 {/exp:channel:entries}
         </ul>
+        <h2>MOAR NEWZ</h2>
+        <p>Check out the <a href="{path='different_news'}">DIFFERENT news</a>:</p>
+        <ul>
+                {exp:channel:entries channel="different_news" limit="10"}
+                        <li><a href="{url_title_path='different_news'}">{title}</a></li>
+                {/exp:channel:entries}
+        </ul>
 </body>
 </html>

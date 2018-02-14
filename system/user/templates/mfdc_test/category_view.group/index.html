@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Category View</title>
+        <meta charset="utf-8">
+</head>
+<body>
+        {!-- This is an example of an Expression Engine comment.  It will NOT show up on the rendered page.--}
+        <!--  This is an HTML comment.  It will show up on the rendered page.-->
+        <h1>Category View</h1>
+        <h4><a href="{path='site'}">Home</a></h4>
+        <p>View by category.</p>
+        <p>Right now Categories '1' and '7' are hard-coded.</p>
+        
+        <ul>
+                {exp:channel:entries category="1|7" limit="10"}
+                        <li><a href="{channel_short_name}/{url_title}">{title}</a></li>
+                {/exp:channel:entries}
+        </ul>
+</body>
+</html>

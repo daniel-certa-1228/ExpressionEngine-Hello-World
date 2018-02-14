@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>This is Different News</title>
+        <meta charset="utf-8">
+</head>
+<body>
+        <h1>This is Different News</h1>
+        <h4><a href="{path='site'}">Home</a></h4>
+
+        <h5 style='color: red;'>List of article titles:</h5>
+        {exp:channel:entries channel="different_news" limit="10"}
+                <li>{title}</li>
+        {/exp:channel:entries}
+        
+        <h5 style='color: red;'>Articles:</h5>
+        {exp:channel:entries channel="different_news" limit="10"}
+            <h2>{title}</h2>
+            <p>By {author}</p>
+            {main_content}
+       {/exp:channel:entries}
+       
+		
+		
+</body>
+</html>

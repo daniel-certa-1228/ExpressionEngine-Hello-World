@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>What's New</title>
+        <meta charset="utf-8">
+</head>
+<body>
+        <h1>All the news that's fit to pixelize.</h1>
+
+        <?php
+                $variable_test = "<h4 style='color: gray;'>Hello, world, this <b>string</b> is stored in a PHP variable.</h4>";
+                echo $variable_test;
+        ?>
+        <h5 style='color: red;'>List of article titles:</h5>
+        {exp:channel:entries channel="mfdc_news" limit="10"}
+                <li>{title}</li>
+        {/exp:channel:entries}
+
+        <h5 style='color: red;'>Articles:</h5>        
+        {exp:channel:entries channel="mfdc_news" limit="10"}
+                <h2>{title}</h2>
+                <p>By {author}</p>
+                {main_content}
+        {/exp:channel:entries}        
+                
+</body>
+</html>
